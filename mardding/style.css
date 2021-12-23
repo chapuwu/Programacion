@@ -1,0 +1,23 @@
+body {
+}
+.prueba p {
+    text-align: center;
+    border: 3px solid chocolate;
+    background: cornflowerblue;
+}
+.prueba2 p {
+    background: chartreuse;
+    border: 3px solid #000;
+    text-align: center;
+    display: inline-block;
+}
+.prueba2 {
+    display: inline-block;
+}
+.prueba {
+    display: inline-block;
+}
+body > p {
+    background: coral;
+    text-align: center;
+}

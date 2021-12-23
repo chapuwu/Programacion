@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    align-items: center;
+    height: 100vh;
+    font-family: Google-Sans-Regular;
+    text-align: center;
+    font-size: 25px;
+}
+.pantalla {
+    background-image: url(wallpaper.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: 345px;
+    border-radius: 7%;
+    position: absolute;
+    display: grid;
+    grid-template-rows: 30px 80px 400px 60px 75px;
+    top: 10px;
+    left: 10px;
+    z-index: -1;
+}
+.cellphone {
+    filter: drop-shadow(0px 0px 10px #000);
+}
+.texto p {
+    color: #fff;
+    text-shadow: 0px 0px 2px #0008;
+    margin-top: 50px;
+}
+.hora p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.apps {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.apps img {
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px #0008;
+}
+.buscador img {
+    height: 25px;
+    margin-left: 10px;
+}
+.buscador-google {
+    display: flex;
+    background-color: #414455;
+    width: 85%;
+    height: 55%;
+    justify-content: space-between;
+    border-radius: 25px;
+    align-items: center;
+    margin-top: 8%;
+}
+.buscador {
+    display: flex;
+    justify-content: center;
+}
+.ciruclito {
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+.punto-azul {
+    position: absolute;
+    background-color: #4284f2;
+    width: 30%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    top: 7px;
+    right: 23px;
+}
+.punto-rojo {
+    position: absolute;
+    background-color: #dd5044;
+    width: 15%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    right: 15px;
+    top: 16px;
+}
+.punto-yellow {
+    position: absolute;
+    background-color: #faba03;
+    width: 16%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    right: 15px;
+    top: 25px;
+}
+.punto-verde {
+    position: absolute;
+    background-color: #1aa15f;
+    width: 10%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    right: 11px;
+    top: 11px;
+}
+.hora {
+    display: flex;
+    justify-content: space-between;
+}
+.iconos {
+    display: grid;
+    width: 70px;
+    height: 100%;
+    margin-top: 7px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+.chiquito {
+    background-color: white;
+    width: 4px;
+    height: 2px;
+}
+.grande {
+    background-color: white;
+    width: 10px;
+    height: 15px;
+    border-radius: 2px;
+}
+.battery {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    filter: drop-shadow(0px 0px 4px #0005);
+}
+.triangulo {
+    width: 0;
+    height: 0;
+    border-right: 8px solid #fff;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+}
+.wifii {
+    background-color: #fff;
+    height: 15px;
+    width: 15px;
+    border-radius: 0px 75% 0px 0px;
+    transform: rotate(-45deg);
+    margin-bottom: 10px;
+}

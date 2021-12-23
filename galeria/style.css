@@ -1,0 +1,29 @@
+body {
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.contenedor img {
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    width: 350px;
+    border: 3px solid #fff;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 3px 2px #0007;
+    transition: filter 300ms ease-in-out;
+}
+.contenedor {
+    padding-top: 2rem;
+    display: inline-flex;
+    width: 50%;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: rgb(21, 255, 0);
+    justify-content: center;
+    border: 2.5px solid #fff;
+    box-shadow: 0px 0px 3px 5px #0004;
+}
+.contenedor img:hover {
+    filter: brightness(200%);
+}

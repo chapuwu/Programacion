@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    background-color: crimson;
+    display: grid;
+    grid-template:
+        'header header' 60px
+        'aside  main' 680px
+        'footer footer' 60px /
+        1fr 7fr;
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: header;
+    padding: 0px 10px;
+}
+aside {
+    grid-area: aside;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: dodgerblue;
+}
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: darkblue;
+}
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212529;
+}
+header a {
+    margin: 0px 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+header a:hover {
+    background: greenyellow;
+    color: lightcoral;
+}
+main a {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: oldlace;
+    font-weight: bolder;
+}
+.play-button {
+    overflow: hidden;
+    position: relative;
+    background-color: #ff3333;
+    padding: 20px 85px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.play-button:hover .blue {
+    left: -15px;
+}
+.blue {
+    background-color: #000033;
+    width: 110%;
+    height: 300%;
+    position: absolute;
+    top: -20px;
+    left: -300px;
+    transition: left 210ms ease-in;
+    transform: rotate(8deg);
+}
+.texto {
+    color: #fff;
+}
+.texto a {
+    text-decoration: none;
+    color: #007bff;
+}
+.texto a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+.container-aside-texto {
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+.container-aside-texto p {
+    padding: 20px 0px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+.container-aside-texto p:hover {
+    background: crimson;
+    cursor: pointer;
+}

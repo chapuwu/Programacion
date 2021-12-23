@@ -1,0 +1,47 @@
+.grid {
+    display: grid;
+    width: 40%;
+    height: 10rem;
+    column-gap: 100px;
+    row-gap: 10px;
+    grid-template-areas: "head head"
+                          "menu main"
+                          "foot foot";
+}
+.a {grid-area: head; background: blue;}
+.b { grid-area: menu; background: red }
+.c { grid-area: main; background: green }
+.d { grid-area: foot; background: orange }
+
+
+
+
+
+
+
+/* .header {
+    background: darkred;
+    grid-column-start: x0;
+    grid-column-end: x3;
+
+    /* Equivalente a */
+/*   grid-column: x0 / x3;
+}
+
+.sidebar {
+    background: black;
+    grid-row: y1 / y2;
+    color: white;
+}
+
+.content {
+    background: orange;
+    grid-column: x1 / x3;
+    grid-row: y1 / y3;
+}
+
+.footer {
+    background: green;
+    grid-column: x0 / x3;
+    grid-row: y2;
+}

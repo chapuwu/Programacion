@@ -1,0 +1,9 @@
+.contenedor div {
+    background-color: blueviolet;
+    width: 150px;
+    font-size: 35px;
+}
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+}

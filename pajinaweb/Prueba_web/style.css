@@ -1,0 +1,82 @@
+body {
+    background-image: url(wallpaper2you_150590.jpg);
+    background-size: cover;
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: end;
+}
+
+.barranav {
+    display: flex;
+    justify-content: end;
+    width: 50vw;
+    height: 10vh;
+    list-style: none;
+    border-radius: 20px;
+    padding: 0px 10px;
+}
+.listt {
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+}
+.listt a {
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    padding: 15px;
+    border-radius: 10px;
+    width: 115px;
+    text-transform: uppercase;
+}
+.listt a:hover {
+    background-color: chartreuse;
+    color: lightcoral;
+}
+.container-lateral {
+    background: #33cccc;
+    display: inline-flex;
+    align-items: center;
+    font-size: 20px;
+    height: 500px;
+    border-radius: 6px;
+}
+.lateralski {
+    list-style: none;
+    padding: 0px 5px;
+}
+.lateral {
+    display: flex;
+    font-size: 19px;
+}
+.lateral a {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 30px 0px;
+    width: 150px;
+}
+.lateral a:hover {
+    background-color: greenyellow;
+    color: lightcoral;
+}
+.container-parrafo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - 175px);
+    height: 450px;
+}
+.parrafo {
+    font-size: 30px;
+    text-transform: uppercase;
+    background-color: #fff;
+    height: 40px;
+    width: 120px;
+}
+aside {
+    display: inline-flex;
+}

@@ -1,0 +1,16 @@
+.contenedor div {
+    background: brown;
+    border: 4px solid #000;
+    width: 21%;
+}
+.contenedor {
+    height: 240px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: ;
+}
+body {
+    margin: 0;
+    text-align: center;
+    font-size: 25px;
+}

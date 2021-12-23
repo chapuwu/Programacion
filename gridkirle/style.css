@@ -1,0 +1,38 @@
+body {
+    background-color: #000;
+    margin: 0;
+}
+.contenedor {
+    display: grid;
+    grid-template:
+        'a b c g' 6%
+        'a b d g' 1fr
+        'a b f g' 7% /
+        80px 265px 985px 265px;
+    height: 100vh;
+    width: 100vw;
+}
+.servers {
+    grid-area: a;
+    background-color: purple;
+}
+.channels {
+    grid-area: b;
+    background-color: red;
+}
+.header {
+    grid-area: c;
+    background-color: seagreen;
+}
+.chat {
+    grid-area: d;
+    background-color: silver;
+}
+.input {
+    grid-area: f;
+    background-color: teal;
+}
+.users {
+    grid-area: g;
+    background-color: darkblue;
+}

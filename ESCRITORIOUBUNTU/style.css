@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    background-image: url('./img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh;
+}
+.activity-bar {
+    color: #fff;
+    background-color: #1d1d1d;
+    height: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 90%;
+    padding: 0px 15px;
+}
+p {
+    margin: 0;
+}
+.icons-bar img {
+    max-width: 100%;
+    max-height: 100%;
+    height: 60%;
+    margin: 0px 7px;
+}
+.icons-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.activity-bar p span {
+    width: 0.3rem;
+    height: 0.5rem;
+    display: inline-block;
+}
+.little-arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #ddd;
+    margin-left: 7px;
+}
+.task-bar {
+    background: #0008;
+    width: 5%;
+    height: calc(100% - 1.7rem);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    display: inline-flex;
+}
+
+.programs {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    width: 55%;
+}
+.task-bar img {
+    width: 100%;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+    margin: 6px 0px;
+}
+.apps {
+    height: 40px;
+    width: 40px;
+    margin: 20px 0px;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.apps div {
+    width: 8px;
+    height: 8px;
+    background: #fffb;
+    border-radius: 2px;
+}
+.desktop {
+    width: calc(100vw - 5%);
+    height: calc(100vh - 1.7rem);
+    display: inline-flex;
+    position: absolute;
+    flex-direction: column;
+    padding-left: 2rem;
+    box-sizing: border-box;
+}
+.icon {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    width: 5rem;
+    margin: 7px;
+    margin-bottom: 2rem;
+}
+.icon p {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+}
+.icon img {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+.programs img:hover {
+    background: #fff2;
+    box-shadow: 0px 0px 0px 8px #fff2;
+    border-radius: 2px;
+}
+.apps:hover {
+    background: #fff2;
+    box-shadow: 0px 0px 0px 13px #fff2;
+    border-radius: 1px;
+}
+.icon:hover {
+    background: #fff2;
+    box-shadow: 0px 0px 0px 5px #fff2;
+    border-radius: 2px;
+}
