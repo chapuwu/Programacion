@@ -1,9 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@ body{
     flex-direction: column;
     background: #0e1538;
 }
-a{
+a {
     position: relative;
     padding: 20px 60px;
     display: flex;
@@ -22,17 +22,13 @@ a{
     transition: 1s;
     overflow: hidden;
     text-decoration: none;
-    -webkit-box-reflect: below 1px linear-gradient(transparent,
-   transparent, #0004);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
 }
-a:hover{
+a:hover {
     background: var(--clr);
-    box-shadow: 0 0 10px var(--clr),
-    0 0 30px var(--clr),
-    0 0 60px var(--clr),
-    0 0 100px var(--clr);
+    box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 60px var(--clr), 0 0 100px var(--clr);
 }
-a::before{
+a::before {
     content: '';
     position: absolute;
     width: 40px;
@@ -42,29 +38,28 @@ a::before{
     animation: animate 2s linear infinite;
     animation-delay: calc(0.33s * var(--i));
 }
-a:hover::before{
+a:hover::before {
     width: 100%;
 }
-@keyframes animate{
+@keyframes animate {
     0% {
-        transform:rotate(0deg)
+        transform: rotate(0deg);
     }
-    100%
-    {
+    100% {
         transform: rotate(360deg);
     }
 }
-a::after{
+a::after {
     content: '';
     position: absolute;
     inset: 4px;
     background: #0e1538;
     transition: 0.5s;
 }
-a:hover::after{
+a:hover::after {
     background: var(--clr);
 }
-a span{
+a span {
     position: relative;
     z-index: 1;
     font-size: 2em;
@@ -74,6 +69,6 @@ a span{
     letter-spacing: 4px;
     transition: 0.5s;
 }
-a:hover span{
+a:hover span {
     opacity: 1;
 }
