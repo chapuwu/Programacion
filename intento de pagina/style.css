@@ -62,8 +62,9 @@ main a {
     position: relative;
     background-color: #ff3333;
     padding: 20px 85px;
-    border-radius: 3px;
+    /* border-radius: 3px;  */
     cursor: pointer;
+    box-shadow: 0px 0px 0px 10px royalblue, 0px 0px 0px 11px #fff;
 }
 .play-button:hover .blue {
     left: -15px;
