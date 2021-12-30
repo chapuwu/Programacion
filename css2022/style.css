@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    background-color: deepskyblue;
+    display: grid;
+    grid-template:
+        'header header' 50px
+        'aside main' 1fr
+        'footer footer' 50px /
+        1fr 6fr;
+    height: 100vh;
+    width: 100vw;
+}
+header {
+    background-color: dimgray;
+    grid-area: header;
+}
+main {
+    background-color: crimson;
+    grid-area: main;
+}
+aside {
+    background-color: chocolate;
+    grid-area: aside;
+}
+footer {
+    background-color: blue;
+    grid-area: footer;
+}
+.boton {
+    margin: 10px;
+    border: 1px solid darksalmon;
+    outline: 0;
+    font-size: 20px;
+    padding: 5px 20px;
+    color: #fff;
+    background-color: darkred;
+    border-radius: 7px;
+    transition: background-color 350ms ease-in-out;
+}
+.boton:hover {
+    background-color: rgb(151, 19, 19);
+}
+.boton:active {
+    background-color: rgb(141, 49, 49);
+}

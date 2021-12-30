@@ -1,0 +1,26 @@
+body {
+    background-color: aqua;
+}
+.transitioon {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    transition: width 500ms, height 500ms linear;
+}
+.transitioon:hover {
+    width: 30vw;
+    height: 50vh;
+}
+.transitioon2 {
+    position: absolute;
+    top: 420px;
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    transition: width 2s, height 300ms ease-in, background-color 2s ease-in-out 1s;
+}
+.transitioon2:hover {
+    background: blue;
+    width: 30vw;
+    height: 50vh;
+}

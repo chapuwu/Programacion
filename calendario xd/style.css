@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 50vh;
+    width: 50vw;
+}
+.item1 {
+    background: brown;
+}
+.item2 {
+    background: crimson;
+}
+.item3 {
+    background: darkgreen;
+}
+.item4 {
+    background: darkviolet;
+}
+.item5 {
+    background: gold;
+}
+.item6 {
+    background: gray;
+}
+.item7 {
+    background: lightblue;
+}
+.item8 {
+    background: lightseagreen;
+}
+.item9 {
+    background: magenta;
+}
+.item10 {
+    background: mediumblue;
+}
+.item11 {
+    background: orangered;
+}
+.item12 {
+    background: teal;
+}
