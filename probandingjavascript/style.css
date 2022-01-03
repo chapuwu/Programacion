@@ -1,0 +1,24 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    margin: 0;
+}
+.boton {
+    font-size: 30px;
+    margin: 20px;
+    align-items: center;
+}
+.container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 50%;
+}
+.juan {
+    color: #fff;
+    display: block;
+    font-size: 30px;
+    text-align: center;
+}
