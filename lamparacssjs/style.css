@@ -1,0 +1,35 @@
+body {
+    background-color: #808080;
+    margin: 0;
+}
+.container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+}
+.switch {
+    width: 150px;
+    height: 150px;
+    background-image: url(switchon.png);
+    background-size: cover;
+}
+
+.lampara {
+    transform: rotate(180deg);
+    height: 300px;
+    width: 200px;
+    background-size: cover;
+}
+.switch-off {
+    transform: rotate(180deg);
+}
+.lampara-on {
+    background-image: url(lamparaon.png);
+}
+
+.lampara-off {
+    background-image: url(lamparaoff.png);
+}

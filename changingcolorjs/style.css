@@ -1,0 +1,15 @@
+body {
+    background-color: #808080;
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.cuadrado {
+    background-color: #fff;
+    width: 300px;
+    height: 300px;
+}

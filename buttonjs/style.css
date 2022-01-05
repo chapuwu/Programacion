@@ -1,0 +1,20 @@
+body {
+    background-color: #000;
+    margin: 0;
+}
+.container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 400px;
+    width: 100vw;
+}
+.boton {
+    font-size: 25px;
+    margin: 15px;
+}
+.text-photo-buttons {
+    color: #fff;
+    display: block;
+    text-align: center;
+}
