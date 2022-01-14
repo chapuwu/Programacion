@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(53, 53, 53);
+}
+.imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    color: white;
+    text-decoration: none;
+}
+.flecha {
+    height: 60px;
+    margin: 0px 70px;
+    filter: invert();
+    opacity: 0.8;
+    transition: opacity 200ms ease-in-out;
+    cursor: pointer;
+}
+.izqui {
+    transform: rotate(180deg);
+}
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flecha:hover {
+    opacity: 1;
+}
+p {
+    font-weight: bold;
+    opacity: 0.8;
+    font-size: 26px;
+    transition: opacity 300ms ease-in-out;
+    text-shadow: 3px 3px 2px #0005;
+}
+p:hover {
+    opacity: 1;
+}
+.imagen img {
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px 3px #0005;
+}
