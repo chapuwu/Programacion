@@ -1,0 +1,63 @@
+body {
+    background-color: gray;
+}
+.imagen p {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+.flecha {
+    border: solid rgb(211, 211, 211);
+    border-width: 0 15px 15px 0;
+    display: inline-block;
+    padding: 18px;
+    margin: 50px;
+    cursor: pointer;
+    transition: border 200ms ease-in-out;
+}
+.flecha:hover {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 15px 15px 0;
+}
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.container-main {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
+}
+.imagen {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pick-button {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    width: 99vw;
+}
+.pick-button a {
+    background: rgb(26, 26, 146);
+    color: white;
+    text-decoration: none;
+    padding: 7px 70px;
+    font-size: 30px;
+    border-radius: 5px;
+    transition: background 200ms ease-in-out;
+}
+.pick-button a:hover {
+    background: red;
+}
+.icon {
+    border-radius: 50%;
+}
