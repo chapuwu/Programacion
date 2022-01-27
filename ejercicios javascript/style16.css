@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    display: inline-flex;
+    display: flex;
     height: 100vh;
     justify-content: center;
     width: 100vw;
@@ -15,5 +15,10 @@ body {
 .form {
     display: inline-flex;
     flex-direction: column;
-    
+}
+.nombre {
+    width: 400px;
+}
+.response {
+    display: block;
 }
