@@ -6,13 +6,13 @@ class Persona {
 
     saludar() {
         console.log(`hola mi nombre es ${this.nombre} y tengo ${this.edad} anios, un gusto`)
+        console.log(`un gusto ${this.nombre}`)
     }
 }
 
 function main() {
-    const presentacion = new Persona('Gilberto', 15)
+    const presentacion = new Persona('Emmanuel', 22)
     presentacion.saludar()
-    console.log(`un gusto ${}`)
 }
 
 main()
