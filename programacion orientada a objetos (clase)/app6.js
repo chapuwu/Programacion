@@ -2,15 +2,17 @@ class Humano {
     constructor(objeto) {
         this.objeto = objeto
     }
+
+    imprimirData() {
+        console.log(`nombre: ${this.objeto.nombre}\nedad: ${this.objeto.edad}`)
+    }
 }
 
-const saberPersona = new Humano({
-    persona1 = {
-        nombre: 'gilberto',
-        edad: 40
-    },
-    persona2 = {
-        nombre: 'roberto',
-        edad: 20
-    }
+const dato1 = prompt('introduce un dato')
+const dato2 = prompt('introduce otro dato')
+
+const datazos = new Humano({
+    nombre: dato1,
+    edad: dato2,
 })
+datazos.imprimirData()
