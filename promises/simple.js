@@ -2,7 +2,7 @@ function soyUnaPromesaXd() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(`TERMINE XD`)
-        }, 5000)
+        })
     })
 }
 
