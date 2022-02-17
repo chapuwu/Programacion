@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #e6e6e6;
+    text-align: center;
+}
+
+.container {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    height: 92vh;
+    width: 60vw;
+    padding: 30px;
+}
+
+.container h1 {
+    font-weight: normal;
+}
+
+.texto-boton {
+    width: 100%;
+}
+
+.texto {
+    flex-direction: row;
+    border: 1px solid #2ac064;
+    font-size: 20px;
+    height: 40px;
+    width: 85%;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 7px 0px 0px 7px;
+}
+
+.enviar {
+    box-sizing: border-box;
+    border: 1px solid #2ac064;
+    height: 40px;
+    width: 15%;
+    background-color: #e6e6e6;
+    color: #2ac064;
+    font-size: 20px;
+    border-left: 0;
+    font-weight: 100;
+    border-radius: 0px 7px 7px 0px;
+    cursor: pointer;
+}
+
+.texto-boton button:hover {
+    background-color: #558a69;
+}
+
+.add-list {
+    margin: 70px;
+    width: 100%;
+    height: 20vh;
+}
+
+.add-list ul {
+    font-weight: bold;
+    list-style: none;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+.add-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 14px;
+}
+
+.add-list i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.iconos i:nth-child(1) {
+    color: rgb(55, 182, 55);
+}
+
+.iconos i:nth-child(2) {
+    color: rgb(199, 90, 90);
+}
+
+.iconos i:nth-child(3) {
+    color: rgb(80, 80, 194);
+}

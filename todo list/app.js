@@ -39,7 +39,7 @@ function addNewTodo(todo) {
     edit.classList.add('material-icons')
 
     // dandole funcionalidad a los botones
-    // done.addEventListener('click', () => completeTodo(todo, li))
+    done.addEventListener('click', () => completeTodo(todo, li))
     close.addEventListener('click', () => removeTodo(todo, li))
     edit.addEventListener('click', () => editTodo(todo, li))
 
@@ -60,7 +60,7 @@ function addNewTodo(todo) {
     ul.appendChild(li)
 }
 
-// function completeTodo(todo, element) {}
+function completeTodo(todo, element) {}
 
 function removeTodo(todo, element) {
     element.remove()
