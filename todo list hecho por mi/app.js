@@ -55,22 +55,22 @@ function agregarLi(texto) {
 
     ul.appendChild(crearLi) // agregando texto con iconos para mostrarlos en el DOM
 
-    // darle a los iconos funciones
+    // darle funciones a los iconos
 
-    finalizado.addEventListener('click', () => tareaCompleta(crearLi))
-    editar.addEventListener('click', () => editarTarea(crearLi))
-    eliminar.addEventListener('click', () => eliminarTarea(crearLi))
+    finalizado.addEventListener('click', () => tareaCompleta(texto, juntador))
+    editar.addEventListener('click', () => editarTarea(texto, juntador))
+    eliminar.addEventListener('click', () => eliminarTarea(texto, juntador))
 }
 
 // funcion para eliminar tareas del DOM
 
-function eliminarTarea(crearLi) {
+function eliminarTarea(texto, crearLi) {
     crearLi.remove()
 }
 
 // editar tarea
 
 function editarTarea(texto) {
-    const editando = prompt('editar: ', texto)
-    texto.textContent = editando
+    const editando = prompt('editar: ')
+    juntador.textContent = editando // esto remplaza por lo que se introduzca en el prompt
 }
