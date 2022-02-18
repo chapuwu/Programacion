@@ -12,7 +12,7 @@ enviar.addEventListener('click', () => {
 // funcion que agrega texto al DOM, con iconos (finalizado, editar y/o eliminar)
 
 function agregarLi(texto) {
-    const crearLi = document.createElement('li')
+    const li = document.createElement('li')
 
     // creando iconos
 
@@ -21,21 +21,21 @@ function agregarLi(texto) {
     const finalizado = document.createElement('i')
     finalizado.innerText = 'done' // agregando done adentro del tag <i>
     finalizado.classList.add('material-icons') // agregando una clase en el tag <i>
-    crearLi.appendChild(finalizado) // agregando un texto con icono adentro del tag <li>
+    li.appendChild(finalizado) // agregando un texto con icono adentro del tag <li>
 
     // icono eliminar
 
     const eliminar = document.createElement('i')
     eliminar.innerText = 'close'
     eliminar.classList.add('material-icons')
-    crearLi.appendChild(eliminar)
+    li.appendChild(eliminar)
 
     // icono editar
 
     const editar = document.createElement('i')
     editar.innerText = 'edit'
     editar.classList.add('material-icons')
-    crearLi.appendChild(editar)
+    li.appendChild(editar)
 
     // span para que los iconos no esten separados
 
@@ -50,27 +50,27 @@ function agregarLi(texto) {
 
     // agregando texto con iconos
 
-    crearLi.innerText = texto // lo que escriba en la linea 8 se va a poner aca
-    crearLi.appendChild(juntador) // esto agrega los span adentro de <li>
+    li.innerText = texto // lo que escriba en la linea 8 se va a poner aca
+    li.appendChild(juntador) // esto agrega los span adentro de <li>
 
-    ul.appendChild(crearLi) // agregando texto con iconos para mostrarlos en el DOM
+    ul.appendChild(li) // agregando texto con iconos para mostrarlos en el DOM
 
     // darle funciones a los iconos
 
     finalizado.addEventListener('click', () => tareaCompleta(texto, juntador))
-    editar.addEventListener('click', () => editarTarea(texto, juntador))
-    eliminar.addEventListener('click', () => eliminarTarea(texto, juntador))
+    editar.addEventListener('click', () => editarTarea(texto, li))
+    eliminar.addEventListener('click', () => eliminarTarea(li))
 }
 
 // funcion para eliminar tareas del DOM
 
-function eliminarTarea(texto, crearLi) {
-    crearLi.remove()
+function eliminarTarea(li) {
+    li.remove() // eliminar una tarea del DOM
 }
 
 // editar tarea
 
-function editarTarea(texto) {
-    const editando = prompt('editar: ')
-    juntador.textContent = editando // esto remplaza por lo que se introduzca en el prompt
+function editarTarea(texto, iconos) {
+    const editando = prompt('editar: ', texto) // todo lo que se introduzca en prompt se guarda en texto
+    iconos.childNodes[0].textContent = editando // childNodes mantiene los iconos en el DOM al editar
 }
