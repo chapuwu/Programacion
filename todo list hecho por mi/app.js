@@ -74,3 +74,9 @@ function editarTarea(texto, iconos) {
     const editando = prompt('editar: ', texto) // todo lo que se introduzca en prompt se guarda en texto
     iconos.childNodes[0].textContent = editando // childNodes mantiene los iconos en el DOM al editar
 }
+
+localStorage.setItem('guardarDatos', texto.value)
+
+const obtenerDatos = localStorage.getItem('guardarDatos')
+
+obtenerDatos.innerText = 'guardarDatos'
