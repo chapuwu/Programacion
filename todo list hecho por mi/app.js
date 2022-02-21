@@ -4,9 +4,13 @@ const enviar = document.querySelector('.enviar')
 
 const ul = document.querySelector('.add-list > ul')
 
+const todos = restaurarDesdeAlmacenamientoLocal()
+
 enviar.addEventListener('click', () => {
     agregarLi(texto.value)
+    todos.push(texto.value)
     texto.value = '' // vaciar el campo para escribir al mandar un texto
+    actualizarAlmacenamientoLocal()
 })
 
 // funcion que agrega texto al DOM, con iconos (finalizado, editar y/o eliminar)
@@ -59,13 +63,18 @@ function agregarLi(texto) {
 
     finalizado.addEventListener('click', () => tareaCompleta(texto, juntador))
     editar.addEventListener('click', () => editarTarea(texto, li))
-    eliminar.addEventListener('click', () => eliminarTarea(li))
+    eliminar.addEventListener('click', () => eliminarTarea(texto, li))
 }
 
 // funcion para eliminar tareas del DOM
 
-function eliminarTarea(li) {
+function eliminarTarea(todo, li) {
     li.remove() // eliminar una tarea del DOM
+    const index = todos.indexOf(todo)
+    if (index !== -1) {
+        todos.splice(index, 1)
+        actualizarAlmacenamientoLocal()
+    }
 }
 
 // editar tarea
@@ -73,10 +82,25 @@ function eliminarTarea(li) {
 function editarTarea(texto, iconos) {
     const editando = prompt('editar: ', texto) // todo lo que se introduzca en prompt se guarda en texto
     iconos.childNodes[0].textContent = editando // childNodes mantiene los iconos en el DOM al editar
+    const index = todos.indexOf(texto)
+    if (index !== -1) {
+        todos[index] = editando
+    }
+    actualizarAlmacenamientoLocal()
 }
 
-localStorage.setItem('guardarDatos', texto.value)
+function actualizarAlmacenamientoLocal() {
+    localStorage.setItem('todos', JSON.stringify(todos))
+}
 
-const obtenerDatos = localStorage.getItem('guardarDatos')
-
-obtenerDatos.innerText = 'guardarDatos'
+function restaurarDesdeAlmacenamientoLocal() {
+    const localTodos = JSON.parse(localStorage.getItem('todos'))
+    if (localTodos === null) {
+        return []
+    } else {
+        for (let i = 0; i < localTodos.length; i++) {
+            agregarLi(localTodos[i])
+        }
+        return localTodos
+    }
+}
