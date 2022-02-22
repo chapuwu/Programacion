@@ -6,6 +6,10 @@ const ul = document.querySelector('.add-list > ul')
 
 const todos = restaurarDesdeAlmacenamientoLocal()
 
+const ulComplete = document.querySelector('.texto-complete > ul')
+
+const todoComplete = []
+
 enviar.addEventListener('click', () => {
     agregarLi(texto.value)
     todos.push(texto.value)
@@ -61,7 +65,7 @@ function agregarLi(texto) {
 
     // darle funciones a los iconos
 
-    finalizado.addEventListener('click', () => tareaCompleta(texto, juntador))
+    finalizado.addEventListener('click', () => tareaCompleta(texto, li))
     editar.addEventListener('click', () => editarTarea(texto, li))
     eliminar.addEventListener('click', () => eliminarTarea(texto, li))
 }
@@ -89,6 +93,16 @@ function editarTarea(texto, iconos) {
     actualizarAlmacenamientoLocal()
 }
 
+// tarea completada
+
+function tareaCompleta(texto, li) {
+    const liComplete = document.createElement('li')
+    liComplete.innerText = texto
+    ulComplete.appendChild(liComplete)
+    li.remove()
+    todoComplete.push(texto)
+    guardarTareaComplete()
+}
 function actualizarAlmacenamientoLocal() {
     localStorage.setItem('todos', JSON.stringify(todos))
 }
@@ -103,4 +117,8 @@ function restaurarDesdeAlmacenamientoLocal() {
         }
         return localTodos
     }
+}
+
+function guardarTareaComplete() {
+    localStorage.setItem('saveTodo', JSON.stringify(todoComplete))
 }
