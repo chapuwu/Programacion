@@ -96,11 +96,7 @@ function editarTarea(texto, iconos) {
 // tarea completada
 
 function tareaCompleta(texto, li) {
-    const liComplete = document.createElement('li')
-    liComplete.innerText = texto
-    ulComplete.appendChild(liComplete)
-    li.remove()
-    todoComplete.push(texto)
+    agregarCompletado(texto, li)
     guardarTareaComplete()
 }
 function actualizarAlmacenamientoLocal() {
@@ -121,4 +117,22 @@ function restaurarDesdeAlmacenamientoLocal() {
 
 function guardarTareaComplete() {
     localStorage.setItem('saveTodo', JSON.stringify(todoComplete))
+}
+
+function agregarCompletado(texto, li) {
+    const liComplete = document.createElement('li')
+    liComplete.innerText = texto
+    ulComplete.appendChild(liComplete)
+    li.remove()
+    todoComplete.push(texto)
+    const index = todos.indexOf(texto)
+    if (index !== -1) {
+        todos.splice(index, 1)
+        actualizarAlmacenamientoLocal()
+    }
+}
+
+function guardar2Arrays() {
+    localStorage.setItem('probando', JSON.stringify(todoComplete))
+    localStorage.setItem('probando2', JSON.stringify(todos))
 }
