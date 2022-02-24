@@ -4,11 +4,19 @@ const enviar = document.querySelector('.enviar')
 
 const ul = document.querySelector('.add-list > ul')
 
-const todos = restaurarDesdeAlmacenamientoLocal()
+const todos = restaurarDesdeAlmacenamientoLocal('todos')
 
 const ulComplete = document.querySelector('.texto-complete > ul')
 
-const todoComplete = []
+const todoComplete = restaurarDesdeAlmacenamientoLocal('saveTodo')
+
+todos.forEach((element) => {
+    agregarLi(element)
+})
+
+todoComplete.forEach((element) => {
+    agregarCompletado(element)
+})
 
 enviar.addEventListener('click', () => {
     agregarLi(texto.value)
@@ -97,42 +105,37 @@ function editarTarea(texto, iconos) {
 
 function tareaCompleta(texto, li) {
     agregarCompletado(texto, li)
-    guardarTareaComplete()
+    actualizarAlmacenamientoLocal()
 }
 function actualizarAlmacenamientoLocal() {
     localStorage.setItem('todos', JSON.stringify(todos))
+    localStorage.setItem('saveTodo', JSON.stringify(todoComplete))
 }
 
-function restaurarDesdeAlmacenamientoLocal() {
-    const localTodos = JSON.parse(localStorage.getItem('todos'))
+function restaurarDesdeAlmacenamientoLocal(key) {
+    const localTodos = JSON.parse(localStorage.getItem(key))
     if (localTodos === null) {
         return []
     } else {
-        for (let i = 0; i < localTodos.length; i++) {
-            agregarLi(localTodos[i])
-        }
         return localTodos
     }
-}
-
-function guardarTareaComplete() {
-    localStorage.setItem('saveTodo', JSON.stringify(todoComplete))
 }
 
 function agregarCompletado(texto, li) {
     const liComplete = document.createElement('li')
     liComplete.innerText = texto
     ulComplete.appendChild(liComplete)
-    li.remove()
     todoComplete.push(texto)
-    const index = todos.indexOf(texto)
-    if (index !== -1) {
-        todos.splice(index, 1)
+    if (li !== undefined) {
+        borrarDelTodo(texto, li)
         actualizarAlmacenamientoLocal()
     }
 }
 
-function guardar2Arrays() {
-    localStorage.setItem('probando', JSON.stringify(todoComplete))
-    localStorage.setItem('probando2', JSON.stringify(todos))
+function borrarDelTodo(texto, li) {
+    li.remove()
+    const index = todos.indexOf(texto)
+    if (index !== -1) {
+        todos.splice(index, 1)
+    }
 }
