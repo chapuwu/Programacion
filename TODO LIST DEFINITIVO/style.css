@@ -47,9 +47,10 @@ body {
     color: rgb(211, 211, 211);
     text-transform: uppercase;
     font-weight: bold;
-    margin: 40px 0px;
+    margin: 90px 0px;
     background-color: #001a4d;
     height: 40px;
+    text-align: center;
 }
 
 .container2 {
@@ -96,7 +97,7 @@ body {
 }
 
 .texto {
-    font-size: 20px;
+    font-size: 25px;
     width: 25%;
     outline: none;
     color: black;
@@ -113,5 +114,58 @@ body {
 }
 
 .container-text button:active {
-    background-color: rgb(255, 210, 126);
+    padding: 5px 10px;
+}
+
+.tareas-list span {
+    margin: 0px 10px;
+}
+
+.tareas-list p {
+    cursor: pointer;
+}
+
+.delete {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+}
+
+.delete:active {
+    transform: scale(0.9);
+}
+
+.edit {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+}
+
+.edit:active {
+    transform: scale(0.9);
+}
+
+.finish {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+}
+
+.finish:active {
+    transform: scale(0.9);
 }
