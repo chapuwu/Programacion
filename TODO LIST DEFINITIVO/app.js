@@ -38,8 +38,20 @@ function tareasList(texto) {
     eliminar.addEventListener('click', () => {
         eliminarTarea(texto, li)
     })
+
+    editar.addEventListener('click', () => {
+        editarTarea(texto, li)
+    })
 }
 
 function eliminarTarea(tarea, li) {
     li.remove()
+    const index = lista.indexOf(tarea)
+    if (index !== -1) {
+        lista.splice(index, 1)
+    }
+}
+
+function editarTarea(tarea, li) {
+    const tareaEditada = prompt('introduce un nuevo nombre para la tarea', li)
 }
