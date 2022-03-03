@@ -52,6 +52,7 @@ function eliminarTarea(tarea, li) {
     }
 }
 
-function editarTarea(tarea, li) {
-    const tareaEditada = prompt('introduce un nuevo nombre para la tarea', li)
+function editarTarea(tarea, p) {
+    const tareaEditada = prompt('introduce un nuevo nombre para la tarea', tarea)
+    p.textContent = tareaEditada
 }
