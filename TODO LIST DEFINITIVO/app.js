@@ -4,6 +4,10 @@ const botonEnviar = document.querySelector('.botonenviar')
 
 const ul = document.querySelector('.tareas-list > ul')
 
+const ulCompleto = document.querySelector('.tareas-completas > ul')
+
+const listaCompleta = []
+
 const lista = []
 
 botonEnviar.addEventListener('click', () => {
@@ -42,6 +46,10 @@ function tareasList(texto) {
     editar.addEventListener('click', () => {
         editarTarea(texto, li)
     })
+
+    terminado.addEventListener('click', () => {
+        tareaCompletada(texto, li)
+    })
 }
 
 function eliminarTarea(tarea, li) {
@@ -54,5 +62,15 @@ function eliminarTarea(tarea, li) {
 
 function editarTarea(tarea, p) {
     const tareaEditada = prompt('introduce un nuevo nombre para la tarea', tarea)
-    p.textContent = tareaEditada
+    p.childNodes[0].textContent = tareaEditada
+}
+
+function tareaCompletada(texto, li) {
+    const liCompleto = document.createElement('li')
+    const parrafo = document.createElement('p')
+    ulCompleto.appendChild(liCompleto)
+    liCompleto.appendChild(parrafo)
+    parrafo.append(texto)
+    li.remove()
+    listaCompleta.push(texto)
 }
