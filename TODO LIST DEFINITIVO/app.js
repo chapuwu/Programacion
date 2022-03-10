@@ -64,6 +64,10 @@ function eliminarTarea(tarea, li) {
 function editarTarea(tarea, p) {
     const tareaEditada = prompt('introduce un nuevo nombre para la tarea', tarea)
     p.childNodes[0].textContent = tareaEditada
+    const editarArray = lista.indexOf(tarea)
+    if (editarArray !== -1) {
+        lista[editarArray] = tareaEditada
+    }
 }
 
 function tareaCompletada(texto, li) {
