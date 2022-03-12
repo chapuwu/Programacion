@@ -58,8 +58,8 @@ function createLiElement(text, isNew) {
 function doneTodo(li) {
     const todo = li.childNodes[0].textContent
     // delete the old li element and create a new one for the completed ul
-    const newLi = createLiElement(todo)
-    completedUl.appendChild(newLi, false)
+    const newLi = createLiElement(todo, false)
+    completedUl.appendChild(newLi)
     li.remove()
 
     // modify the app's state
