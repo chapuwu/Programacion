@@ -15,6 +15,7 @@ botonEnviar.addEventListener('click', () => {
     lista.push(texto.value)
     texto.value = ''
     guardarLocalmente()
+    guardarTareaLocal()
 })
 
 function tareasList(texto) {
@@ -82,4 +83,12 @@ function tareaCompletada(texto, li) {
 
 function guardarLocalmente() {
     localStorage.setItem('tarea', JSON.stringify(lista))
+}
+
+function guardarTareaLocal() {
+    localStorage.setItem('tarea', JSON.stringify(lista))
+}
+
+function restaurarTarea() {
+    const tareaGuardada = JSON.parse(localStorage.getItem('tarea'))
 }
