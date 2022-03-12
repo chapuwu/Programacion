@@ -1,26 +1,62 @@
-const numero = document.querySelector('.number')
+const randomclick = document.querySelector('.botonclick')
 
-const disminuir = document.querySelector('.disminuir')
+const botonIzquierdo = document.querySelector('.izquierda')
 
-const reset = document.querySelector('.botonclick')
+const botonDerecho = document.querySelector('.derecha')
 
-const aumentar = document.querySelector('.aumentar')
+const imagen = document.querySelector('.imagen')
 
-let numerito = 0
+const nombre = document.querySelector('.nombre')
 
-disminuir.addEventListener('click', () => {
-    numerito--
-    numero.textContent = numerito
+const comentarios = document.querySelector('.comentario')
+
+const comentariosArray = [
+    {
+        nombre: 'Barbara Palvin',
+        comentario: 'atr gato la pagina me gusto es muy anashe quedo goodeto para lo pibis y las pibis',
+        imagen: 'download.jpeg',
+    },
+
+    {
+        nombre: 'Linus Torvalds',
+        comentario: 'este chico me llena de orgullo lo que acaba de programar POR DIOS esta persona ocupara mi lugar',
+        imagen: '1366_2000.jpg',
+    },
+
+    {
+        nombre: 'Neymar',
+        comentario: 'pelo amor de deus que isso cara boa mano',
+        imagen: 'Neymar_PSG.jpg',
+    },
+    {
+        nombre: 'Lionel',
+        comentario: 'nanaanan muy cebado el wachin es muy god programando capaz sea bueno en el futbol tambien',
+        imagen: 'lionel-messi_267x267.jpg',
+    },
+]
+
+let comentarioActual = 0
+
+botonIzquierdo.addEventListener('click', () => {
+    comentarioActual--
+    if (comentarioActual === -1) {
+        comentarioActual = comentariosArray.length - 1
+    }
+    actualizador()
 })
 
-reset.addEventListener('click', () => {
-    numerito = 0
-    numero.textContent = numerito
+botonDerecho.addEventListener('click', () => {
+    comentarioActual++
+    if (comentarioActual === comentariosArray.length) {
+        comentarioActual = 0
+    }
+    actualizador()
 })
 
-aumentar.addEventListener('click', () => {
-    numerito++
-    numero.textContent = numerito
-})
+function actualizador() {
+    imagen.setAttribute('src', comentariosArray[comentarioActual].imagen)
+    nombre.innerText = comentariosArray[comentarioActual].nombre
+    comentarios.innerText = comentariosArray[comentarioActual].comentario
+}
 
-numero.textContent = numerito
+actualizador()
