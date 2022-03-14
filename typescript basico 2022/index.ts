@@ -4,11 +4,28 @@ function saludar(persona: string) {
 
 saludar('emmanuel')
 
-interface State
-
-
-const estado = {
-    incompleto: [],
-    completo: [],
+// ESTO ES TYPESCRIPT, SOLO PARA EL COMPILADOR, NO SE EJECUTA, NO ES CODIGO, ES DECLARACION DE TIPOS NOMAS
+interface State {
+    incompleto: string[]
+    completo: string[]
+    jose: Algo
 }
 
+interface Algo {
+    cosa: number
+    cosa2: boolean
+}
+
+// ESTO ES CODIGO, JAVASCRIPT
+const estado: State = {
+    incompleto: [],
+    completo: [],
+    jose: {
+        cosa: 1,
+        cosa2: true,
+    },
+}
+
+estado.incompleto.push('probanding')
+
+// ENTENDES??, TIENE OTRO OBJETO ADENTRO, CON OTRA INTERFAZ
