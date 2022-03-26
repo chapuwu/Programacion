@@ -1,0 +1,130 @@
+body {
+    background: rgb(22, 22, 22);
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.texto {
+    margin: 20px;
+    padding: 10px;
+    font-size: 22px;
+}
+
+.botonenviar {
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.container-abajo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    background: rgb(71, 71, 124);
+    height: 100%;
+    width: 40%;
+    align-items: center;
+}
+
+.todo-list h1 {
+    text-align: center;
+}
+
+.todo-complete h1 {
+    text-align: center;
+}
+
+.container-abajo > .list-todo ul {
+    list-style: none;
+    width: 80%;
+    height: 90%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+
+.container-abajo > .list-todo li {
+    width: 100%;
+    cursor: pointer;
+    margin: 30px 0px;
+}
+
+.container-abajo > .todo-complete ul {
+    list-style: none;
+    width: 100%;
+    height: 90%;
+    margin: 10px 0px;
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+}
+
+.container-abajo > .todo-complete li {
+    text-align: center;
+    width: 100%;
+}
+
+.botones {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.finalizado {
+    background-color: green;
+    color: white;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+}
+
+.eliminar {
+    background-color: red;
+    color: white;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+}
+
+.editar {
+    background-color: blue;
+    color: white;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+}
+
+.container-todo-completo {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
