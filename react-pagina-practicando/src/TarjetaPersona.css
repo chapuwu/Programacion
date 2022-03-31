@@ -1,0 +1,45 @@
+.tarjeta-persona {
+    width: 100%;
+    background-color: #111;
+    aspect-ratio: 6/2;
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    transition: transform 300ms ease-in-out, filter 300ms ease-in-out, outline 300ms ease-in-out;
+    outline: 2px solid #888;
+}
+
+.tarjeta-persona:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+    outline: 2px solid #bbb;
+}
+
+.tarjeta-persona img {
+    display: inline-block;
+    width: calc(100% / 3);
+    height: 100%;
+    object-fit: cover;
+}
+
+.detalles {
+    width: calc(100% / 3 * 2);
+    padding: 0.2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detalles h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.detalles p {
+    margin: 0.25rem;
+    font-size: 1rem;
+    text-align: center;
+}
