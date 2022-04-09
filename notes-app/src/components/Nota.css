@@ -1,0 +1,15 @@
+.note {
+    background: rgb(146, 146, 93);
+    color: black;
+    display: block;
+    padding: 1rem;
+}
+h3,
+p {
+    margin: 0;
+}
+
+h3 {
+    text-decoration: underline;
+    margin-bottom: 0.25rem;
+}
