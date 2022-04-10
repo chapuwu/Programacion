@@ -17,13 +17,6 @@ body {
     flex-direction: column;
 }
 
-svg {
-    display: block;
-    height: 60%;
-    width: 10%;
-    fill: #9aa0a6;
-}
-
 .input-iconos {
     display: flex;
     background-color: transparent;
@@ -52,11 +45,11 @@ input {
 }
 
 input:hover {
-    background-color: #222;
+    background-color: #5f6368;
 }
 
 .input-iconos:hover {
-    background-color: #222;
+    background-color: #5f6368;
 }
 
 .botones-buscar button {
@@ -73,36 +66,15 @@ input:hover {
 }
 
 .botones-buscar button:hover {
-    border: 1px solid rgb(167, 167, 167);
-}
-
-.bottom-1 {
-    display: flex;
-    align-items: center;
-    background-color: #131416;
-    color: #9aa0a6;
-    height: 49%;
-}
-
-.bottom-2 {
-    display: flex;
-    align-items: flex-end;
-    background-color: #131416;
-    color: #9aa0a6;
-    font-size: 15px;
-    height: 50%;
+    outline: 1px solid rgb(167, 167, 167);
 }
 
 hr {
     margin: 0;
     height: 1%;
-    width: 100vw;
+    width: 100%;
     border: none;
-}
-
-.texto-bottom {
-    margin: 0;
-    font-size: 15px;
+    background-color: #bdc1c6;
 }
 
 .idioma {
@@ -116,9 +88,4 @@ hr {
 
 .idioma a:hover {
     text-decoration: underline;
-}
-
-.container-buttom {
-    margin: 0;
-    height: 14%;
 }
