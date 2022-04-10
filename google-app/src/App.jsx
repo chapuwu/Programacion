@@ -40,8 +40,10 @@ function App() {
                 <div className='bottom-1'>
                     <p className='texto-bottom'>Argentina</p>
                 </div>
-                <br />
-                <div className='bottom-2'></div>
+                <div className='bottom-2'>
+                    <p>About Advertising Bussines How Search Works</p>
+                    <p>Privacy Terms Settings</p>
+                </div>
             </div>
         </div>
     )

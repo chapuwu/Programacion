@@ -1,7 +1,6 @@
 body {
     background-color: #202124;
     font-family: sans-serif;
-    box-sizing: border-box;
     margin: 0;
 }
 
@@ -15,33 +14,36 @@ body {
 }
 
 svg {
-    height: 30px;
+    display: block;
+    height: 60%;
+    width: 10%;
 }
 
 .input-iconos {
     display: flex;
     background-color: rgb(50, 50, 50);
-    border-radius: 10px;
-    height: 5%;
-    width: 35%;
+    border-radius: 24px;
+    height: 44px;
+    width: 638px;
     justify-content: space-between;
-    border: 1px solid rgb(187, 187, 187);
+    border: 1px solid #5f6368;
     margin-bottom: 5px;
     align-items: center;
 }
 
 img {
     margin: 20px 0px;
-    background-color: rgb(50, 50, 50);
+    height: 92px;
 }
 
 input {
-    background-color: rgb(50, 50, 50);
+    background-color: transparent;
     width: 85%;
     border: none;
     outline: none;
-    color: white;
+    color: #e8eaed;
     height: 95%;
+    font-size: 16px;
 }
 
 input:hover {
