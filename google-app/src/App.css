@@ -4,8 +4,12 @@ body {
     margin: 0;
 }
 
+.App {
+    height: 100vh;
+}
+
 .container-oficial {
-    height: 86vh;
+    height: 86%;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -17,11 +21,12 @@ svg {
     display: block;
     height: 60%;
     width: 10%;
+    fill: #9aa0a6;
 }
 
 .input-iconos {
     display: flex;
-    background-color: rgb(50, 50, 50);
+    background-color: transparent;
     border-radius: 24px;
     height: 44px;
     width: 638px;
@@ -76,7 +81,7 @@ input:hover {
     align-items: center;
     background-color: #131416;
     color: #9aa0a6;
-    padding: 15px 30px;
+    height: 49%;
 }
 
 .bottom-2 {
@@ -84,8 +89,15 @@ input:hover {
     align-items: flex-end;
     background-color: #131416;
     color: #9aa0a6;
-    padding: 15px 30px;
     font-size: 15px;
+    height: 50%;
+}
+
+hr {
+    margin: 0;
+    height: 1%;
+    width: 100vw;
+    border: none;
 }
 
 .texto-bottom {
@@ -108,4 +120,5 @@ input:hover {
 
 .container-buttom {
     margin: 0;
+    height: 14%;
 }
