@@ -1,10 +1,12 @@
 body {
     background-color: #202124;
     font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .container-oficial {
-    height: 100vh;
+    height: 86vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -53,11 +55,14 @@ input:hover {
 .botones-buscar button {
     cursor: pointer;
     background: #303134;
-    margin: 20px 5px;
-    padding: 10px 15px;
-    border-radius: 5px;
+    margin: 11px 4px;
+    padding: 0px 16px;
+    border-radius: 4px;
     border: none;
     color: #e8eaed;
+    font-size: 14px;
+    height: 36px;
+    text-align: center;
 }
 
 .botones-buscar button:hover {
@@ -67,21 +72,23 @@ input:hover {
 .bottom-1 {
     display: flex;
     align-items: center;
-    background-color: black;
-    color: white;
-    height: 50px;
-}
-
-.texto-bottom {
-    margin: 0px 15px;
+    background-color: #131416;
+    color: #9aa0a6;
+    padding: 15px 30px;
 }
 
 .bottom-2 {
     display: flex;
     align-items: flex-end;
-    background-color: black;
+    background-color: #131416;
     color: #9aa0a6;
-    height: 70px;
+    padding: 15px 30px;
+    font-size: 15px;
+}
+
+.texto-bottom {
+    margin: 0;
+    font-size: 15px;
 }
 
 .idioma {
@@ -95,4 +102,8 @@ input:hover {
 
 .idioma a:hover {
     text-decoration: underline;
+}
+
+.container-buttom {
+    margin: 0;
 }

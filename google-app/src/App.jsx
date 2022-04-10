@@ -36,11 +36,13 @@ function App() {
                     </p>
                 </div>
             </div>
-            <div className='bottom-1'>
-                <p className='texto-bottom'>Argentina</p>
+            <div className='container-buttom'>
+                <div className='bottom-1'>
+                    <p className='texto-bottom'>Argentina</p>
+                </div>
+                <br />
+                <div className='bottom-2'></div>
             </div>
-            <br />
-            <div className='bottom-2'></div>
         </div>
     )
 }
