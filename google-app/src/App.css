@@ -1,0 +1,85 @@
+body {
+    background-color: rgb(50, 50, 50);
+    font-family: sans-serif;
+}
+
+.container-oficial {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+svg {
+    height: 30px;
+}
+
+.input-iconos {
+    display: flex;
+    background-color: rgb(50, 50, 50);
+    border-radius: 10px;
+    height: 5%;
+    width: 35%;
+    justify-content: space-between;
+    border: 1px solid rgb(187, 187, 187);
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+img {
+    margin: 20px 0px;
+    background-color: rgb(50, 50, 50);
+}
+
+input {
+    background-color: rgb(50, 50, 50);
+    width: 85%;
+    border: none;
+    outline: none;
+    color: white;
+    height: 95%;
+}
+
+input:hover {
+    background-color: #222;
+}
+
+.input-iconos:hover {
+    background-color: #222;
+}
+
+.botones-buscar button {
+    cursor: pointer;
+    background: #444;
+    margin: 20px 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+.botones-buscar button:hover {
+    border: 1px solid rgb(167, 167, 167);
+}
+
+.bottom-1 {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 50px;
+}
+
+.texto-bottom {
+    margin: 0px 15px;
+}
+
+.bottom-2 {
+    display: flex;
+    align-items: flex-end;
+    background-color: black;
+    color: white;
+    height: 70px;
+}
