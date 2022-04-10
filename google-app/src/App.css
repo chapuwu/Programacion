@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(50, 50, 50);
+    background-color: #202124;
     font-family: sans-serif;
 }
 
@@ -52,12 +52,12 @@ input:hover {
 
 .botones-buscar button {
     cursor: pointer;
-    background: #444;
+    background: #303134;
     margin: 20px 5px;
     padding: 10px 15px;
     border-radius: 5px;
     border: none;
-    color: white;
+    color: #e8eaed;
 }
 
 .botones-buscar button:hover {
@@ -80,6 +80,19 @@ input:hover {
     display: flex;
     align-items: flex-end;
     background-color: black;
-    color: white;
+    color: #9aa0a6;
     height: 70px;
+}
+
+.idioma {
+    color: #bdc1c6;
+}
+
+.idioma a {
+    color: #8ab4f8;
+    text-decoration: none;
+}
+
+.idioma a:hover {
+    text-decoration: underline;
 }

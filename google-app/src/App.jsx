@@ -31,7 +31,7 @@ function App() {
                     <button>Google Search</button> <button>I'm Feeling Lucky</button>
                 </div>
                 <div className='texto-idioma'>
-                    <p>
+                    <p className='idioma'>
                         Google offered in: <a href=''>Español (Latinoamérica)</a>
                     </p>
                 </div>
