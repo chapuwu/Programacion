@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10%;
+}
+
+.header a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    margin: 20px 10px;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+.perfil {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    height: 35px;
+    margin-right: 15px;
+    margin-left: 10px;
+}
