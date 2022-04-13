@@ -1,5 +1,6 @@
 import React from 'react'
 import lupa from '../assets/icons/lupa.png'
+import PinnedIcons from './PinnedIcon'
 
 export default function StartMenu() {
     return (
@@ -8,10 +9,11 @@ export default function StartMenu() {
                 <img src={lupa} alt='' className='h-4 ml-3' />
                 <input
                     type='text'
-                    className='w-4/5 h-9 bg-zinc-800 text-white outline-none ml-4 placeholder:text-slate-400'
+                    className='w-4/5 h-9 bg-zinc-800 text-white outline-none ml-4 placeholder:text-white'
                     placeholder='Type here to search'
                 />
             </div>
+            <PinnedIcons />
         </div>
     )
 }
