@@ -10,7 +10,7 @@ import chrome from '../assets/icons/chrome.png'
 
 export default function TaskBar() {
     return (
-        <div className='bg-gray-900 w-screen h-10 flex justify-center'>
+        <div className='bg-gray-900 bg-opacity-80 backdrop-blur-lg w-screen h-10 flex justify-center'>
             <div className='flex items-center'>
                 <div className='h-8 flex justify-center items-center w-8 bg-white/20'>
                     <img src={inicio} alt='' className='h-6' />
