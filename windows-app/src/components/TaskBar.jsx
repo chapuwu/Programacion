@@ -16,25 +16,25 @@ export default function TaskBar() {
                     <img src={inicio} alt='' className='h-6' />
                 </div>
                 <div className='h-8 flex justify-center items-center w-8 hover:bg-white/20 ml-7'>
-                    <img src={cmd} alt='' className='h-5 hover:cursor-pointer' />
+                    <img src={cmd} alt='' className='h-5' />
                 </div>
                 <div className='ml-7 h-8 flex justify-center items-center w-8 hover:bg-white/20'>
-                    <img src={carpeta} alt='' className='h-5 hover:cursor-pointer' />
+                    <img src={carpeta} alt='' className='h-5' />
                 </div>
                 <div className='ml-7 h-8 flex justify-center items-center w-8 hover:bg-white/20'>
-                    <img src={discord} alt='' className='h-6 hover:cursor-pointer' />
+                    <img src={discord} alt='' className='h-6' />
                 </div>
                 <div className='ml-7 h-8 flex justify-center items-center w-8 hover:bg-white/20'>
-                    <img src={telegram} alt='' className='h-6 hover:cursor-pointer' />
+                    <img src={telegram} alt='' className='h-6' />
                 </div>
                 <div className='ml-7 h-8 flex justify-center items-center w-8 hover:bg-white/20'>
-                    <img src={whattsap} alt='' className='h-6 hover:cursor-pointer' />
+                    <img src={whattsap} alt='' className='h-6' />
                 </div>
                 <div className='ml-7 h-8 flex justify-center items-center w-8 hover:bg-white/20'>
-                    <img src={steam} alt='' className='h-6 hover:cursor-pointer' />
+                    <img src={steam} alt='' className='h-6' />
                 </div>
                 <div className='ml-7 h-8 flex justify-center items-center w-8 hover:bg-white/20'>
-                    <img src={chrome} alt='' className='h-6 hover:cursor-pointer' />
+                    <img src={chrome} alt='' className='h-6' />
                 </div>
             </div>
         </div>
