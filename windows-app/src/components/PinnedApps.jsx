@@ -26,7 +26,7 @@ const apps = [
 export default function PinnedApps() {
     return (
         <div className='h-70 mx-4'>
-            <div className='flex justify-between mx-6 my-4 mt-6'>
+            <div className='flex justify-between mx-6 my-3 mt-6'>
                 <h3 className='text-white font-bold text-sm'>Pinned</h3>
                 <button className='text-white text-sm flex items-center bg-white bg-opacity-10 px-2 py-1 rounded'>
                     All apps <img src={arrow} alt='' className='inline h-5 ml-2' />

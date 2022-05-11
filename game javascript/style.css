@@ -1,0 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+canvas {
+    background: gray;
+    display: block;
+    margin: 0;
+    height: 100vh;
+    aspect-ratio: 480/320;
+}

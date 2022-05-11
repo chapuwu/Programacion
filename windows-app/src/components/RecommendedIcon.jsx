@@ -1,5 +1,6 @@
 import React from 'react'
 import RecommendedIcon2 from './RecommendedIcon2'
+import arrow from '../assets/icons/arrow.svg'
 
 const Recommended = [
     { img: 'onenote.png', name: 'Mis notas', fecha: 'Tuesday at 7:02 PM' },
@@ -14,8 +15,10 @@ export default function RecommendedIcon() {
     return (
         <div className='h-48 w-11/12 mt-16'>
             <div className='flex justify-between'>
-                <h2 className='text-white text-sm'>Recommended</h2>
-                <button className='text-white text-sm'>More</button>
+                <h2 className='text-white text-sm font-bold'>Recommended</h2>
+                <button className='text-white text-xs flex items-center bg-white bg-opacity-10 px-2 py-1 rounded'>
+                    More <img src={arrow} alt='' className='inline h-5 ml-2' />
+                </button>
             </div>
             <div>
                 <ul className='grid grid-cols-2 grid-rows-3 h-full'>
