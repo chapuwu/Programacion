@@ -12,11 +12,19 @@ export default function Input({ onNewTodo }) {
                     setInputText(event.target.value)
                 }}
                 value={inputText}
+                spellCheck={false}
+                onKeyDown={(event) => {
+                    if (event.key === 'Enter') {
+                        onNewTodo(inputText)
+                        setInputText('')
+                    }
+                }}
             />
             <button
                 className='bg-purple-600 text-white text-bold text-3xl ml-1 px-2 rounded-md'
                 onClick={() => {
                     onNewTodo(inputText)
+                    setInputText('')
                 }}>
                 +
             </button>
