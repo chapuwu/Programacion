@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import TodoElement from './TodoElement'
 
 export default function Todos({ tareas, onDelete }) {

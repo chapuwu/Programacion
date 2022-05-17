@@ -6,13 +6,13 @@ function App() {
     const [notas, setNotas] = useState([])
 
     return (
-        <div className='bg-gray-500 h-screen w-screen flex justify-center items-center flex-col'>
+        <div className='bg-gray-500 h-screen overflow-y-auto w-screen flex items-center flex-col'>
             <Input
-                onNewText={(nota) => {
-                    setNotas([...notas])
+                onNewText={(titulo, nota) => {
+                    setNotas([...notas, { titulo, nota }])
                 }}
             />
-            <Notas />
+            <Notas notas={notas} />
         </div>
     )
 }
