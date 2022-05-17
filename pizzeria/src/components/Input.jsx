@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Button from './Button'
 
 export default function Input({ onNewText }) {
     const [texto, setTexto] = useState('')
@@ -22,7 +21,17 @@ tomorrow I have to cook a steak...'
                 onChange={(event) => {
                     setTexto(event.target.value)
                 }}></textarea>
-            <Button />
+            <div className='mt-10 flex justify-evenly w-full'>
+                <button
+                    className='bg-green-600 p-3 rounded-lg hover:scale-110'
+                    onClick={() => {
+                        onNewText(texto)
+                        setTexto('')
+                    }}>
+                    Enviar Nota
+                </button>
+                <button className='bg-blue-800 p-3 rounded-lg hover:scale-110'>Reiniciar</button>
+            </div>
         </div>
     )
 }
