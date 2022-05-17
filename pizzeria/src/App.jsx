@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import Input from './components/Input'
+import Notas from './components/Notas'
 
 function App() {
-    const [count, setCount] = useState(0)
-
     return (
-        <div className='bg-gray-500 h-screen w-screen'>
-            <h1>probando</h1>
+        <div className='bg-gray-500 h-screen w-screen flex justify-center items-center flex-col'>
+            <Input />
+            <Notas />
         </div>
     )
 }
