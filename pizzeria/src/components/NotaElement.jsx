@@ -4,6 +4,19 @@ export default function NotaElement({ text, titulo }) {
     const [color, setColor] = useState('')
     const colors = ['bg-red-700', 'bg-orange-600', 'bg-lime-700', 'bg-teal-500', 'bg-sky-900', 'bg-violet-700']
 
+    function checkLocal(key) {
+        const localNotes = JSON.parse(localStorage.getItem(key))
+        if (localNotes === null) {
+            return []
+        } else {
+            return localNotes
+        }
+    }
+
+    function updateLocal() {
+        localStorage.setItem('')
+    }
+
     useEffect(() => {
         setColor(colors[Math.floor(Math.random() * colors.length)])
     }, [])
