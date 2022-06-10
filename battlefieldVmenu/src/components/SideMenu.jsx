@@ -1,14 +1,25 @@
 import React from 'react'
 import SideMenuItem from './SideMenuItem'
 import logo from '../../public/logo.png'
+import banner from '../public/banner.png'
+import play from '../public/play.png'
+import burger from '../public/burger.png'
+import help from '../public/help.png'
+import off from '../public/off.png'
+import btvlogo from '../public/btvlogo.jpg'
+import bt1icon from '../public/bt1logo.webp'
+import bt4icon from '../public/bt4icon.png'
 
 export default function SideMenu() {
     const items = [
-        { img: 'banner.png', text: 'Pelotones' },
-        { img: 'play.png', text: 'Ver' },
-        { img: 'burger.png', text: 'Noticias' },
-        { img: 'help.png', text: 'Ayuda' },
-        { img: 'off.png', text: 'Salir' },
+        { img: btvlogo, text: 'Battlefield V' },
+        { img: bt1icon, text: 'Battlefield 1' },
+        { img: bt4icon, text: 'Battlefield 4' },
+        { img: banner, text: 'Pelotones' },
+        { img: play, text: 'Ver' },
+        { img: burger, text: 'Noticias' },
+        { img: help, text: 'Ayuda' },
+        { img: off, text: 'Salir' },
     ]
 
     return (
