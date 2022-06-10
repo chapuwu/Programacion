@@ -1,6 +1,7 @@
 import React from 'react'
 import MenuSelectItem from './MenuSelectItem'
 import btvlogo from '../public/btvlogo.png'
+import sidemenuicon from '../public/sidemenuicon.png'
 
 export default function MenuSelect() {
     const lista = ['jugar', 'tu compañía', 'armería', 'misiones semanales', 'misiones', 'perfil']
@@ -8,6 +9,7 @@ export default function MenuSelect() {
     return (
         <div className='font-futura w-1/4 h-3/4'>
             <div className='flex w-full justify-center h-36 items-center'>
+                <img src={sidemenuicon} alt='' className='bg-white h-7 mr-7 hover:scale-110' />
                 <img src={btvlogo} alt='' className='h-11' />
             </div>
             <div className='flex justify-center items-end w-full h-full'>
