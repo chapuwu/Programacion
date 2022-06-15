@@ -7,7 +7,21 @@ export default function Welcome() {
             text: 'Unifix #1',
             mapa: 'c1m2_streets',
             slots: '5/10',
-            masinfo: { ip: 'xxxx.xxxx.xxxx:xxxx', playersList: 'fachu masterangel max mis' },
+        },
+        {
+            text: 'Unifix #2',
+            mapa: 'c5m1_waterfront',
+            slots: '8/10',
+        },
+        {
+            text: 'Unifix #3',
+            mapa: 'c10m3_ranchhouse',
+            slots: '10/10',
+        },
+        {
+            text: 'Unifix #4',
+            mapa: 'c4m2_sugarmill_a',
+            slots: '2/10',
         },
     ]
     return (
@@ -17,7 +31,7 @@ export default function Welcome() {
                 <h2 className='text-center text-xl mt-4'>Servidores</h2>
                 <ul>
                     {welcomeItems.map((item) => (
-                        <WelcomeItems text={item.text} mapa={item.mapa} slots={item.slots} />
+                        <WelcomeItems text={item.text} mapa={item.mapa} slots={item.slots} key={welcomeItems} />
                     ))}
                 </ul>
             </div>
