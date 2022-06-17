@@ -31,7 +31,7 @@ export default function Welcome() {
                 <h2 className='text-center text-xl mt-4'>Servidores</h2>
                 <ul>
                     {welcomeItems.map((item) => (
-                        <WelcomeItems text={item.text} mapa={item.mapa} slots={item.slots} key={welcomeItems} />
+                        <WelcomeItems text={item.text} mapa={item.mapa} slots={item.slots} key={item.text} />
                     ))}
                 </ul>
             </div>

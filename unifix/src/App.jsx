@@ -7,7 +7,7 @@ function App() {
     return (
         <div className='h-screen w-auto bg-slate-700'>
             <div className='flex justify-between'>
-                <img src={logo} alt='' className='h-16 mt-5 ml-4' />
+                <img src={logo} alt='' className='h-16 mt-3 ml-4' />
                 <BarNav />
             </div>
             <div className='flex w-full justify-center'>
