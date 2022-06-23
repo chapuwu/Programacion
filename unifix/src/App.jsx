@@ -13,6 +13,7 @@ function App() {
             <div className='flex w-full justify-center'>
                 <Welcome />
             </div>
+            <input type='text' placeholder='esto es una prueba' onChange={(event) => console.log(event.target.value)} />
         </div>
     )
 }
