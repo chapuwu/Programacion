@@ -1,0 +1,17 @@
+.App {
+    background-color: gray;
+    height: 100vh;
+    width: 100vw;
+}
+
+.boton1 {
+    height: 300px;
+}
+
+.boton2 {
+    height: 300px;
+}
+
+span {
+    font-size: 30px;
+}
