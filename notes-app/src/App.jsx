@@ -3,7 +3,7 @@ import './App.css'
 import Nota from './components/Nota'
 
 function App() {
-    const [notas, setNotas] = useState([])
+    const [nota, setNotas] = useState([])
     const [titulo, setTitulo] = useState('')
     const [texto, setTexto] = useState('')
 
@@ -16,6 +16,7 @@ function App() {
     }, [])
 
     // guardando el estado en el localstorage
+    // probando script
     useEffect(() => {
         localStorage.setItem('notas', JSON.stringify(notas)) //
     }, [notas])
