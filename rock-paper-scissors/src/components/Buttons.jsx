@@ -10,6 +10,7 @@ export default function Buttons({ setDrawOption, playRound }) {
                 className='bg-red-800 rounded-md p-4 m-3 hover:bg-slate-400'
                 onClick={() => {
                     setDrawOption('piedra')
+                    playRound()
                 }}>
                 <img src={Rock} alt='' className='h-32' />
             </button>
