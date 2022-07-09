@@ -3,16 +3,16 @@ import Roca from './Roca'
 import Tijera from './Tijera'
 import Papel from './Papel'
 
-export default function Icon({ drawOption }) {
-    if (drawOption === 'piedra') {
+export default function Icon({ option }) {
+    if (option === 'piedra') {
         return <Roca />
     }
 
-    if (drawOption === 'papel') {
+    if (option === 'papel') {
         return <Papel />
     }
 
-    if (drawOption === 'tijera') {
+    if (option === 'tijera') {
         return <Tijera />
     }
 
