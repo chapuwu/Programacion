@@ -19,7 +19,7 @@ export default function Globe({ option, bot }) {
             className={`relative h-32 aspect-square mb-3 flex justify-center items-center ${
                 bot ? 'rotate-180' : 'rotate-0'
             }`}>
-            <img src={src ? globo : null} alt='' className='absolute h-full object-contain top-2' />
+            <img src={option ? globo : null} alt='' className='absolute h-full object-contain top-2' />
             <img src={src} alt='' className={`absolute h-1/2 z-10 object-contain ${bot ? 'rotate-180' : 'rotate-0'}`} />
         </div>
     )
