@@ -22,44 +22,74 @@ app.get('/api/notes', (request, response) => {
 })
 
 app.get('/api/notes/:id', (request, response) => {
-    const id = Number(request.params.id)
-    const note = notes.find((note) => note.id === id)
+    const { id } = request.params
 
-    if (note) {
-        response.json(note)
-    } else {
-        response.status(404).end()
+    Note.findByAndRemove(id)
+        .then((result) => {
+            response.status(204)
+        })
+        .catch((error) => next(error))
+
+    response.status(204).end()
+})
+
+app.put('/api/notes/:id', (request, response) => {
+    const { id } = request.params
+    const note = request.body
+
+    const newNoteInfo = {
+        content: note.content,
+        important: note.important,
     }
+
+    Note.findByIdAndUpdate(id, newNoteInfo, { new: true }).then((result) => {
+        response.json(result)
+    })
 })
 
 app.delete('/api/notes/:id', (request, response) => {
-    const id = Number(request.params.id)
-    notes = notes.filter((note) => note.id === id)
-    response.status(204).end()
+    const { id } = request.params
+
+    Note.findById(id)
+        .then((note) => {
+            if (note) {
+                return response.json(note)
+            } else {
+                response.status(404).end()
+            }
+        })
+        .catch((err) => {
+            next(err)
+        })
 })
 
 app.post('/api/notes', (request, response) => {
     const note = request.body
 
-    if (!note || !note.content) {
+    if (!note.content) {
         return response.status(400).json({
-            error: 'note.content is missing',
+            error: 'required "content" field is missing',
         })
     }
 
-    const ids = notes.map((note) => note.id)
-    const maxId = Math.max(...ids)
-
-    const newNote = {
-        id: maxId + 1,
+    const newNote = new Note({
         content: note.content,
-        important: typeof note.important === 'undefined' ? note.important : false,
-        date: new Date().toISOString(),
+        date: new Date(),
+        important: note.importart || false,
+    })
+
+    note.save().then((savedNote) => {
+        response.json(savedNote)
+    })
+})
+
+app.use((error, request, response, next) => {
+    console.log(error)
+    if (error.name === 'CastError') {
+        response.status(400).send({ error: 'id used is malformed' })
+    } else {
+        response.status(500).end()
     }
-
-    notes = [...notes, newNote]
-
-    response.json(newNote)
 })
 
 const PORT = 3000
