@@ -5,11 +5,11 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const Note = require('./models/note.js')
+const notFound = require('./notFound.js')
+const handleErrors = require('./handleErrors.js')
 
 app.use(cors())
 app.use(express.json())
-
-let notes = []
 
 app.get('/', (request, response) => {
     response.send('<h1>ProbandoAaaanaashe</h1>')
@@ -50,17 +50,11 @@ app.put('/api/notes/:id', (request, response) => {
 app.delete('/api/notes/:id', (request, response) => {
     const { id } = request.params
 
-    Note.findById(id)
-        .then((note) => {
-            if (note) {
-                return response.json(note)
-            } else {
-                response.status(404).end()
-            }
+    Note.findByIdAndDelete(id)
+        .then(() => {
+            response.status(204).end()
         })
-        .catch((err) => {
-            next(err)
-        })
+        .catch((error) => next(error))
 })
 
 app.post('/api/notes', (request, response) => {
@@ -83,14 +77,8 @@ app.post('/api/notes', (request, response) => {
     })
 })
 
-app.use((error, request, response, next) => {
-    console.log(error)
-    if (error.name === 'CastError') {
-        response.status(400).send({ error: 'id used is malformed' })
-    } else {
-        response.status(500).end()
-    }
-})
+app.use(notFound)
+app.use(handleErrors)
 
 const PORT = 3000
 app.listen(PORT, () => {
